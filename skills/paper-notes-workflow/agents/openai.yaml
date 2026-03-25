@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Notes Workflow"
+  short_description: "Create structured Obsidian paper notes with full figures"
+  default_prompt: "Use $paper-notes-workflow to create a comprehensive section-by-section Obsidian paper note and include every figure in the correct section."
