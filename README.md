@@ -4,6 +4,20 @@ A shareable Codex skill for creating standardized Obsidian paper-study notes fro
 
 The skill is opinionated toward a research vault layout and emphasizes full figure coverage, section-by-section notes, required frontmatter, and dashboard updates.
 
+## Prerequisite
+
+This skill is intended to be used alongside [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills). In practice, this workflow assumes those companion Obsidian skills are installed for Obsidian-compatible formatting and vault-oriented note workflows.
+
+Install the companion skills first:
+
+```bash
+python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo kepano/obsidian-skills \
+  --path skills/obsidian-markdown \
+  --path skills/obsidian-cli \
+  --path skills/defuddle
+```
+
 ## What It Does
 
 - Downloads or resolves a paper PDF into `Research/tmp/pdfs/`
@@ -27,6 +41,7 @@ skills/
 
 This skill currently assumes:
 
+- companion skills from `kepano/obsidian-skills` are installed
 - an Obsidian vault with a `Research/` folder
 - a working PDF staging directory at `Research/tmp/pdfs/`
 - a papers dashboard at either `Research/Papers Dashboard.md` or `Research/_ Papers Dashboard.md`
@@ -74,12 +89,20 @@ The result was three paper-note markdown files, which were then rendered to PDF 
 - [TurboQuant example PDF](examples/google-blog-batch/turboquant-paper-notes.pdf)
 - [PolarQuant example PDF](examples/google-blog-batch/polarquant-paper-notes.pdf)
 - [QJL example PDF](examples/google-blog-batch/qjl-paper-notes.pdf)
+- [Example dashboard note](examples/google-blog-batch/sample-vault/Research/_%20Papers%20Dashboard.md)
+- [TurboQuant example note](examples/google-blog-batch/sample-vault/Research/TurboQuant%20-%20Online%20Vector%20Quantization%20with%20Near-optimal%20Distortion%20Rate%20-%20Paper%20Notes.md)
+- [PolarQuant example note](examples/google-blog-batch/sample-vault/Research/PolarQuant%20-%20Quantizing%20KV%20Caches%20with%20Polar%20Transformation%20-%20Paper%20Notes.md)
+- [QJL example note](examples/google-blog-batch/sample-vault/Research/QJL%20-%201-Bit%20Quantized%20JL%20Transform%20for%20KV%20Cache%20Quantization%20with%20Zero%20Overhead%20-%20Paper%20Notes.md)
 
 | TurboQuant | PolarQuant | QJL |
 | --- | --- | --- |
 | [![TurboQuant preview](examples/google-blog-batch/turboquant-preview.png)](examples/google-blog-batch/turboquant-paper-notes.pdf) | [![PolarQuant preview](examples/google-blog-batch/polarquant-preview.png)](examples/google-blog-batch/polarquant-paper-notes.pdf) | [![QJL preview](examples/google-blog-batch/qjl-preview.png)](examples/google-blog-batch/qjl-paper-notes.pdf) |
 
 These previews are first-page renders from the generated notes. They are included to show the level of structure, readability, and polish the workflow can produce.
+
+The repo also includes a small sample vault snapshot with the generated markdown notes and the Dataview dashboard note used to index them.
+
+Raw source-paper PDFs and extracted figure directories are intentionally not included in this repository. They add significant weight, and redistributing publisher assets is a worse default than shipping the generated notes plus rendered previews.
 
 ## License
 

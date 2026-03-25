@@ -7,6 +7,11 @@ description: "Create standardized Obsidian paper-study notes from PDF or arXiv i
 
 Use this workflow as the default baseline, then adapt format/depth to the user request.
 
+Prerequisite:
+
+- Assume companion skills from `https://github.com/kepano/obsidian-skills` are installed, especially `obsidian-markdown`, `obsidian-cli`, and `defuddle`.
+- Use those companion skills for Obsidian-compatible formatting and vault-oriented note handling where appropriate.
+
 ## 1) Ingest Paper Under Research/tmp/pdfs
 
 - Resolve a stable paper id from the URL or filename (for arXiv, use the arXiv id).
